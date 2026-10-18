@@ -1,8 +1,9 @@
 name: Purge Camo Cache
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  # Schedule disabled per GitHub Actions Quota Hygiene Contract; trigger on-demand via workflow_dispatch.
+  # schedule:
+  #   - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
