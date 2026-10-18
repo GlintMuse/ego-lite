@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: main-pr-source-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   require-dev-source:
     runs-on: ubuntu-latest
